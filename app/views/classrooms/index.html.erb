@@ -12,7 +12,7 @@
 <% @classrooms.each do |classroom| %>
   <tr>
     <td><%= classroom.name %></td>
-    <td><%= classroom.school_id %></td>
+    <td><%= classroom.school.name %></td>
     <td><%= link_to 'Show', classroom %></td>
     <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
     <td><%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
