@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121129164846_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20121129164846_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121129164920_create_schools.rb" afterPath="$PROJECT_DIR$/db/migrate/20121129164920_create_schools.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121129164950_create_classrooms.rb" afterPath="$PROJECT_DIR$/db/migrate/20121129164950_create_classrooms.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb" afterPath="$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121129165209_create_attempts.rb" afterPath="$PROJECT_DIR$/db/migrate/20121129165209_create_attempts.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="charmer_example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,6 +17,10 @@
     <file path="/20121129165209_create_attempts.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354209347669" ignored="false" />
     <file path="/development.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354209020547" ignored="false" />
     <file path="/Dummy.txt" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354209487289" ignored="false" />
+    <file path="/20121129165127_create_lessons.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211913890" ignored="false" />
+    <file path="/20121129164950_create_classrooms.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211920502" ignored="false" />
+    <file path="/20121129164920_create_schools.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211925797" ignored="false" />
+    <file path="/20121129164846_create_users.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211933403" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +80,7 @@
     <favorites_list name="Current task" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="20121129165209_create_attempts.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121129165209_create_attempts.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="56" selection-start="301" selection-end="301" vertical-scroll-proportion="0.32929516">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -104,10 +101,13 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121129165026_create_enrollments.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20121129165209_create_attempts.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121129164950_create_classrooms.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121129164920_create_schools.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121129164846_create_users.rb" />
       </list>
     </option>
   </component>
@@ -224,24 +224,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Models" />
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ModelsFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charmer_example" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charmer_example" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ModelsFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Migrations" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.MigrationsFolder" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -507,7 +489,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -526,7 +508,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -628,9 +610,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121129164846_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.050660793">
+        <state line="4" column="14" selection-start="124" selection-end="124" vertical-scroll-proportion="0.103837475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121129164920_create_schools.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0778781">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121129164950_create_classrooms.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="112" selection-end="112" vertical-scroll-proportion="0.07599119">
           <folding />
         </state>
       </provider>
@@ -642,9 +638,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121129165127_create_lessons.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="15" selection-start="207" selection-end="207" vertical-scroll-proportion="0.12665199">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121129165209_create_attempts.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="301" selection-end="301" vertical-scroll-proportion="0.32929516">
+        <state line="7" column="14" selection-start="254" selection-end="254" vertical-scroll-proportion="0.17731278">
           <folding />
         </state>
       </provider>

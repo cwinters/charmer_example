@@ -14,21 +14,21 @@
 ActiveRecord::Schema.define(:version => 20121129165209) do
 
   create_table "classrooms", :force => true do |t|
-    t.text     "name"
+    t.string   "name"
     t.integer  "school_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "schools", :force => true do |t|
-    t.text     "name"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.text     "login"
-    t.text     "name"
+    t.string   "login"
+    t.string   "name"
     t.integer  "school_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

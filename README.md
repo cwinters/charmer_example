@@ -9,13 +9,13 @@ Create basic models:
 
     $ rails new charmer_example
     $ cd charmer_example/
-    $ rails generate scaffold user login:text name:text school_id:integer
-    $ rails generate scaffold school name:text
-    $ rails generate scaffold classroom name:text school_id:integer
+    $ rails generate scaffold user login name school_id:integer
+    $ rails generate scaffold school name
+    $ rails generate scaffold classroom name school_id:integer
     $ rails generate scaffold enrollment user_id:integer classroom_id:integer
-    $ rails generate scaffold enrollment lesson enrollment_id:integer name:text
-    $ rails generate scaffold lesson enrollment_id:integer name:text
-    $ rails generate scaffold attempt user_id:integer lesson_id:integer correct:boolean response:text
+    $ rails generate scaffold enrollment lesson enrollment_id:integer name
+    $ rails generate scaffold lesson enrollment_id:integer name
+    $ rails generate scaffold attempt user_id:integer lesson_id:integer correct:boolean response
 
 Create databases to mirror `config/database.yml`:
 

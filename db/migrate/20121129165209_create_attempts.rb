@@ -5,7 +5,7 @@ class CreateAttempts < ActiveRecord::Migration
       t.integer :user_id
       t.integer :lesson_id
       t.boolean :correct
-      t.text :response
+      t.string :response
 
       t.timestamps
     end

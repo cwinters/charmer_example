@@ -1,0 +1,11 @@
+dropdb charmer_development
+dropdb shard_charmer_one
+dropdb shard_charmer_two
+dropdb shard_charmer_three
+dropdb shard_charmer_four
+
+createdb charmer_development
+createdb shard_charmer_one
+createdb shard_charmer_two
+createdb shard_charmer_three
+createdb shard_charmer_four

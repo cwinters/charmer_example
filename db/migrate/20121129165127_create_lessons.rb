@@ -3,7 +3,7 @@ class CreateLessons < ActiveRecord::Migration
   def change
     create_table :lessons do |t|
       t.integer :enrollment_id
-      t.text :name
+      t.string :name
 
       t.timestamps
     end

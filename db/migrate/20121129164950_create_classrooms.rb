@@ -1,7 +1,7 @@
 class CreateClassrooms < ActiveRecord::Migration
   def change
     create_table :classrooms do |t|
-      t.text :name
+      t.string :name
       t.integer :school_id
 
       t.timestamps
