@@ -1,0 +1,45 @@
+development:
+  # default connection, 'master'
+  adapter: postgresql
+  encoding: utf8
+  database: charmer_development
+  min_messages: WARNING
+  host: 127.0.0.1
+
+  shard_one:
+    adapter: postgresql
+    encoding: utf8
+    database: shard_charmer_one
+    min_messages: WARNING
+    host: 127.0.0.1
+  shard_two:
+    adapter: postgresql
+    encoding: utf8
+    database: shard_charmer_two
+    min_messages: WARNING
+    host: 127.0.0.1
+  shard_three:
+    adapter: postgresql
+    encoding: utf8
+    database: shard_charmer_three
+    min_messages: WARNING
+    host: 127.0.0.1
+  shard_four:
+    adapter: postgresql
+    encoding: utf8
+    database: shard_charmer_four
+    min_messages: WARNING
+    host: 127.0.0.1
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: charmer_test
+  min_messages: WARNING
+  host: 127.0.0.1
+
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000

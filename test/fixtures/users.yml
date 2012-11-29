@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  login: MyText
+  name: MyText
+  school_id: 1
+
+two:
+  login: MyText
+  name: MyText
+  school_id: 1
