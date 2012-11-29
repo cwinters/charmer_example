@@ -13,33 +13,11 @@
 
 ActiveRecord::Schema.define(:version => 20121129165209) do
 
-  create_table "attempts", :force => true do |t|
-    t.integer  "lesson_id"
-    t.boolean  "correct"
-    t.text     "response"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "classrooms", :force => true do |t|
     t.text     "name"
     t.integer  "school_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "enrollments", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "classroom_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  create_table "lessons", :force => true do |t|
-    t.integer  "enrollment_id"
-    t.text     "name"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "schools", :force => true do |t|
