@@ -1,3 +1,10 @@
+PATH
+  remote: ../db-charmer
+  specs:
+    db-charmer (1.8.0)
+      activerecord (<= 3.2.9)
+      activesupport (<= 3.2.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,9 +44,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    db-charmer (1.8.0)
-      activerecord (<= 3.2.9)
-      activesupport (<= 3.2.9)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -108,7 +112,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  db-charmer
+  db-charmer!
   jquery-rails
   pg
   rails (= 3.2.9)

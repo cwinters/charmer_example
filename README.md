@@ -169,3 +169,47 @@ created earlier as well as the tables in a couple of shards:
      public | lessons            | table    | cwinters
      public | lessons_id_seq     | sequence | cwinters
     (6 rows)
+
+## Changes to normal activities
+
+### @record.save!
+
+The standard Rails way to create new objects is:
+
+    @enrollment = Enrollment.new( params[:enrollment] )
+    respond_to do |format|
+      if @enrollment.save
+        ...
+    end
+
+But this doesn't wire in the call to find the shard. Instead you
+need something like the following, since 'shard_for' is a class
+method:
+
+    respond_to do |format|
+      @enrollment = Enrollment.shard_for( params[:classroom_id] ).create!( params[:enrollment] )
+      if @enrollment
+        ...
+
+## Sharding Concerns
+
+What do we need to be concerned with when sharding?
+
+1. Is the per-shard data ("chunk") self contained? If at all
+   possible we don't want to do cross-database joins, or simulate
+   them in the app. This impacts the granularity at which we
+   distribute sharded data. With the Enrollments data the
+   granularity is the school, since reports that we run do so
+   over a school.  
+2. How do we decide where a chunk goes? This can be random (round
+   robin, modulo the ID by shard count, whatever). But it can
+   also draw from application knowledge: for example, we may want
+   to distribute a district's schools as evenly as possible
+   across the shards.
+3. How do we ensure ID uniqueness across the shards? Currently we
+   use the default ActiveRecord strategy for PostgreSQL -- a
+   SEQUENCE defined as a default on the table being inserted
+   into. But instead we should generate the IDs from a sequence
+   at the master table.
+   
+

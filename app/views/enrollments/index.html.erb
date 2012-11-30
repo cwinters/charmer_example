@@ -2,7 +2,9 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>User</th>
+    <th>Name</th>
     <th>Classroom</th>
     <th></th>
     <th></th>
@@ -11,11 +13,13 @@
 
 <% @enrollments.each do |enrollment| %>
   <tr>
-    <td><%= enrollment.user_id %></td>
-    <td><%= enrollment.classroom_id %></td>
-    <td><%= link_to 'Show', enrollment %></td>
-    <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
-    <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= enrollment.id %></td>
+    <td><%= enrollment.user.name %></td>
+    <td><%= enrollment.name %></td>
+    <td><%= enrollment.classroom.name %></td>
+    <td><%= link_to 'Show', enrollment_path(enrollment, classroom_id: enrollment.classroom_id) %></td>
+    <td><%= link_to 'Edit', edit_enrollment_path(enrollment, classroom_id: enrollment.classroom_id) %></td>
+    <td><%= link_to 'Destroy', enrollment_path(enrollment, classroom_id: enrollment.classroom_id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

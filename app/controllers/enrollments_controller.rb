@@ -2,8 +2,10 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments
   # GET /enrollments.json
   def index
-    @enrollments = Enrollment.all
-
+    @enrollments = []
+    CharmerExample::Application.config.shards.each do |shard_name|
+      @enrollments.push( *Enrollment.on_db( shard_name ).all )
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @enrollments }
@@ -13,7 +15,7 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments/1
   # GET /enrollments/1.json
   def show
-    @enrollment = Enrollment.find(params[:id])
+    @enrollment = Enrollment.shard_for( params[:classroom_id] ).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -32,18 +34,19 @@ class EnrollmentsController < ApplicationController
     end
   end
 
-  # GET /enrollments/1/edit
+  # GET /enrollments/1/edit?classroom_id=5
   def edit
-    @enrollment = Enrollment.find(params[:id])
+    @enrollment = Enrollment.shard_for( params[:classroom_id] ).find(params[:id])
   end
 
   # POST /enrollments
   # POST /enrollments.json
   def create
-    @enrollment = Enrollment.new(params[:enrollment])
+    #@enrollment = Enrollment.new(params[:enrollment])
 
     respond_to do |format|
-      if @enrollment.save
+      @enrollment = Enrollment.shard_for( params[:enrollment][:classroom_id] ).create!( params[:enrollment] )
+      if @enrollment
         format.html { redirect_to @enrollment, notice: 'Enrollment was successfully created.' }
         format.json { render json: @enrollment, status: :created, location: @enrollment }
       else
@@ -56,7 +59,8 @@ class EnrollmentsController < ApplicationController
   # PUT /enrollments/1
   # PUT /enrollments/1.json
   def update
-    @enrollment = Enrollment.find(params[:id])
+
+    @enrollment = Enrollment.shard_for( params[:enrollment][:classroom_id] ).find(params[:id])
 
     respond_to do |format|
       if @enrollment.update_attributes(params[:enrollment])
@@ -72,7 +76,7 @@ class EnrollmentsController < ApplicationController
   # DELETE /enrollments/1
   # DELETE /enrollments/1.json
   def destroy
-    @enrollment = Enrollment.find(params[:id])
+    @enrollment = Enrollment.shard_for( params[:classroom_id] ).find(params[:id])
     @enrollment.destroy
 
     respond_to do |format|

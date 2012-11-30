@@ -7,7 +7,7 @@ gem 'rails', '3.2.9'
 
 gem 'pg'
 
-gem 'db-charmer', :require => 'db_charmer'
+gem 'db-charmer', :path => '../db-charmer', :require => 'db_charmer'
 
 #gem 'sqlite3'
 

@@ -15,6 +15,16 @@
   <%= @user.school.name %>
 </p>
 
+<p><b>Enrollments:</b></p>
+<% if @user.enrollments.any? %>
+  <ul>
+    <% @user.enrollments.each do |enrollment| %>
+      <li><%= link_to @enrollment.classroom.name, @enrollment %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>None</p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

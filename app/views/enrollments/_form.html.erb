@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.collection_select( :user_id, User.all, :id, :name, :include_blank => 'Choose person' ) %>
   </div>
   <div class="field">
     <%= f.label :classroom_id %><br />
-    <%= f.number_field :classroom_id %>
+      <%= f.collection_select( :classroom_id, Classroom.all, :id, :full_name, :include_blank => 'Choose classroom' ) %>
   </div>
   <div class="actions">
     <%= f.submit %>
