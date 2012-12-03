@@ -191,6 +191,84 @@ method:
       if @enrollment
         ...
 
+## DB Charmer notes
+
+### Associations
+
+We'd like associations for objects on the same shard to Just
+Work. If I have a LessonEnrollment in 'enrollments' schema on
+shard 1, when I call:
+
+    lesson_enrollment.enrollment
+    
+I shouldn't have to tell the model that it needs to find the
+related enrollment (which is also in the 'enrollments' schema) on
+the same shard. How can we make that happen?
+
+- Model has 'db_magic' call in `DbCharmer::ActiveRecord::DbMagic`
+  (not sure how this gets made available to models...)
+- specifying `:sharded` option adds the class
+  `DbCharmer::ActiveRecord::Sharding` to the model (via
+  `self.extend`); this adds the methods `shard_for`,
+  `on_default_shard`, `on_each_shard` to the model.
+- `shard_for` allows you to specify a key that's used to lookup
+  the shard, so you can do:
+  
+      Enrollment.shard_for(10).find(10)
+
+The '10' in this case is used to lookup the shard, it's not the
+shard name itself. To do that you use `on_db`, like this dumb
+method I wrote to lookup an enrollment across all shards. It
+grabs the shard names from configuration and passes each to
+`on_db` to get a connection to that database.
+
+    def self.multi_find(id)
+      enum       = CharmerExample::Application.config.shards.to_enum
+      enrollment = nil
+      loop do
+        begin
+          enrollment = Enrollment.on_db(enum.next).find(id)
+          break if enrollment
+        rescue
+          # ignored
+        end
+      end
+      return enrollment
+    end
+
+- Associations seem to reference a module's overridden
+  `build_scope` in
+  DbCharmer::ActiveRecord::Preloader::Association. It's a short
+  method but I'm including some other metadata because it's
+  important::
+  
+      ...
+      module Association
+        extend ActiveSupport::Concern
+        included do
+          alias_method_chain :build_scope, :db_magic
+        end
+  
+        def build_scope_with_db_magic
+          if model.db_charmer_top_level_connection? || reflection.options[:polymorphic] ||
+              model.db_charmer_default_connection != klass.db_charmer_default_connection
+            build_scope_without_db_magic
+          else
+            build_scope_without_db_magic.on_db(model)
+          end
+        end
+
+The `build_scope_without_db_magic` confounded me for a
+while. There was no code to be found for it. And as a general
+rule, if there's no code to be found that means Rails generates
+it for you. This is no exception. The name of this method is
+`build_scope_with_db_magic` so the name of the ORIGINAL method is
+`build_scope_without_db_magic`. The method is basically trying to
+figure out if it should re-use the original model's connection.
+
+(See for more this [Stack Overflow question](http://stackoverflow.com/questions/3695839/ruby-on-rails-alias-method-chain-what-exactly-does-it-do))
+
+
 ## Sharding Concerns
 
 What do we need to be concerned with when sharding?
