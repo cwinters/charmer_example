@@ -200,7 +200,7 @@ What do we need to be concerned with when sharding?
    them in the app. This impacts the granularity at which we
    distribute sharded data. With the Enrollments data the
    granularity is the school, since reports that we run do so
-   over a school.  
+   over a school.
 2. How do we decide where a chunk goes? This can be random (round
    robin, modulo the ID by shard count, whatever). But it can
    also draw from application knowledge: for example, we may want
@@ -210,6 +210,11 @@ What do we need to be concerned with when sharding?
    use the default ActiveRecord strategy for PostgreSQL -- a
    SEQUENCE defined as a default on the table being inserted
    into. But instead we should generate the IDs from a sequence
-   at the master table.
+   at the master table. We can create a common `before_create`
+   callback for such tables.
+4. Will uniqueness constraints need to be enforced at the
+   application level instead of the database level? This is
+   somewhat related to item 1 -- depending on how the per-shard
+   data is broken up
    
 

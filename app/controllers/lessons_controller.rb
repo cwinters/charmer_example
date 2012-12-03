@@ -2,7 +2,15 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    @lessons = []
+    @enrollments = []
+    CharmerExample::Application.config.shards.each do |shard_name|
+      @lessons.push( *Lesson.on_db( shard_name ).all )
+      @enrollments.push( *Enrollment.on_db( shard_name ).all )
+    end
+
+    lesson = @lessons.first
+    lesson.enrollment
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,8 +32,9 @@ class LessonsController < ApplicationController
   # GET /lessons/new
   # GET /lessons/new.json
   def new
-    @lesson = Lesson.new
-
+    @lesson = Lesson.new()
+    @lesson.enrollment = Enrollment.multi_find( params[:enrollment_id] )
+    @lesson.classroom_id = @lesson.enrollment.classroom_id
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @lesson }
@@ -40,10 +49,9 @@ class LessonsController < ApplicationController
   # POST /lessons
   # POST /lessons.json
   def create
-    @lesson = Lesson.new(params[:lesson])
-
     respond_to do |format|
-      if @lesson.save
+      @lesson = Lesson.shard_for(params[:lesson][:classroom_id]).create!(params[:lesson])
+      if @lesson
         format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
         format.json { render json: @lesson, status: :created, location: @lesson }
       else

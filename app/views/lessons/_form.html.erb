@@ -12,12 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :enrollment_id %><br />
-    <%= f.number_field :enrollment_id %>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_area :name %>
+    <%= f.label :enrollment_id %><br />
+    <%= @lesson.enrollment.full_name %>
+    <%= f.hidden_field :enrollment_id %>
+    <%= f.hidden_field :classroom_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

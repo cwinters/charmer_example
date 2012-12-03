@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121130191604_add_classroom_to_attempt_and_lesson.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121130193341_add_name_to_enrollment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/charmer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/enrollments/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/enrollments/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/attempt.rb" afterPath="$PROJECT_DIR$/app/models/attempt.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charmer_example.iml" afterPath="$PROJECT_DIR$/charmer_example.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/classroom.rb" afterPath="$PROJECT_DIR$/app/models/classroom.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/lessons/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/enrollment.rb" afterPath="$PROJECT_DIR$/app/models/enrollment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/enrollments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/enrollments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/enrollments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/enrollments/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/lesson.rb" afterPath="$PROJECT_DIR$/app/models/lesson.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/enrollments/show.html.erb" afterPath="$PROJECT_DIR$/app/views/enrollments/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/app/views/lessons/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/lessons_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/lessons_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="charmer_example.iws" />
@@ -28,7 +15,7 @@
     <file path="/application.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354208830190" ignored="false" />
     <file path="/20121129165209_create_attempts.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354209347669" ignored="false" />
     <file path="/development.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354209020547" ignored="false" />
-    <file path="/Dummy.txt" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354310694731" ignored="false" />
+    <file path="/Dummy.txt" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354546407283" ignored="false" />
     <file path="/20121129165127_create_lessons.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211913890" ignored="false" />
     <file path="/20121129164950_create_classrooms.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211920502" ignored="false" />
     <file path="/20121129164920_create_schools.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354211925797" ignored="false" />
@@ -36,11 +23,11 @@
     <file path="/user.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354298974295" ignored="false" />
     <file path="/school.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354212183601" ignored="false" />
     <file path="/classroom.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354303958833" ignored="false" />
-    <file path="/enrollment.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354310763615" ignored="false" />
+    <file path="/enrollment.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354325092188" ignored="false" />
     <file path="/lesson.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354310773641" ignored="false" />
     <file path="/attempt.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354310751819" ignored="false" />
-    <file path="/_form.html.erb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354305213402" ignored="false" />
-    <file path="/index.html.erb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354311466022" ignored="false" />
+    <file path="/_form.html.erb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354328362995" ignored="false" />
+    <file path="/index.html.erb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354328856350" ignored="false" />
     <file path="/index.html" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354215275547" ignored="false" />
     <file path="/show.html.erb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354304257328" ignored="false" />
     <file path="/charmer.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354305254174" ignored="false" />
@@ -60,8 +47,11 @@
     <file path="/20121130191604_add_classroom_to_attempt_and_lesson.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354303055010" ignored="false" />
     <file path="/20121130193341_add_name_to_enrollment.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354304043548" ignored="false" />
     <file path="/enrollments_controller.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354310507881" ignored="false" />
-    <file path="/a.dummy" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354304982333" ignored="false" />
+    <file path="/a.dummy" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354332305167" ignored="false" />
     <file path="/fragment.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354308040003" ignored="false" />
+    <file path="/lessons_controller.rb" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354331724521" ignored="false" />
+    <file path="$PROJECT_DIR$/../TTM/apangea/java/src/Util.java" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354396198135" ignored="false" />
+    <file path="$PROJECT_DIR$/../TTM/apangea/java/src/EnrollmentCollector.java" changelist="8412ddd7-cfd5-448c-b1d6-9b5250e393cb" time="1354479252042" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +100,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -122,37 +112,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lesson.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="89" selection-start="390" selection-end="390" vertical-scroll-proportion="0.5599251">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="lessons_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+            <state line="34" column="37" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enrollments_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/enrollments_controller.rb">
+      <file leaf-file-name="association.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations/builder/association.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="40" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0">
+            <state line="43" column="0" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="associations.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="163" column="0" selection-start="9301" selection-end="9301" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singular_association.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations/singular_association.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="15" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rescue.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/enrollments/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/lessons/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="158" selection-start="744" selection-end="744" vertical-scroll-proportion="-10.78125">
+            <state line="13" column="36" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="38" selection-start="0" selection-end="401" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enrollment.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/enrollment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="22" selection-start="296" selection-end="296" vertical-scroll-proportion="0.24175824">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="36" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_view/helpers/form_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1267" column="8" selection-start="54148" selection-end="54148" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,9 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121130191604_add_classroom_to_attempt_and_lesson.rb" />
@@ -193,9 +234,12 @@
         <option value="$PROJECT_DIR$/config/initializers/charmer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/enrollments_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/attempt.rb" />
-        <option value="$PROJECT_DIR$/app/models/enrollment.rb" />
         <option value="$PROJECT_DIR$/app/models/lesson.rb" />
         <option value="$PROJECT_DIR$/app/views/enrollments/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/enrollment.rb" />
+        <option value="$PROJECT_DIR$/app/views/lessons/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/lessons/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/lessons_controller.rb" />
       </list>
     </option>
   </component>
@@ -226,7 +270,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="RailsProjectView" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -238,6 +282,122 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lessons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enrollments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -356,6 +516,24 @@
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="LessonsController" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.ControllerClassNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charmer_example" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="EnrollmentsController" />
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.ControllerClassNode" />
             </PATH_ELEMENT>
@@ -380,18 +558,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charmer_example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,11 +573,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: charmer_example">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -524,19 +690,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -563,6 +716,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -675,7 +841,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
-        <env name="RUBYLIB" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib" />
+        <env name="RUBYLIB" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/ruby-debug-ide-0.4.17.beta14/lib" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
@@ -728,7 +894,7 @@
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -739,7 +905,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -802,121 +968,118 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/lessons_controller.rb</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/enrollments/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/enrollments/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="330" selection-end="330" vertical-scroll-proportion="-5.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/charmer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_controller/metal/mime_responds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="0" selection-start="6803" selection-end="6803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/validations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="10" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../db-charmer/lib/db_charmer/sharding/method/hash_map.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="91" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activesupport-3.2.9/lib/active_support/core_ext/class/attribute_accessors.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../db-charmer/lib/db_charmer/active_record/sharding.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../db-charmer/lib/db_charmer/active_record/multi_db_proxy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activesupport-3.2.9/lib/active_support/hash_with_indifferent_access.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_controller/metal.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4448" selection-end="4448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/attempt.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="124" selection-end="158" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/enrollment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="158" selection-start="744" selection-end="744" vertical-scroll-proportion="0.70552146" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/enrollments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="40" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="133" selection-end="200" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/enrollments/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="515" selection-end="615" vertical-scroll-proportion="-10.0625" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_view/helpers/form_tag_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="416" column="10" selection-start="21889" selection-end="21889" vertical-scroll-proportion="0.33205375" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_view/helpers/form_options_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="85" selection-start="8337" selection-end="8337" vertical-scroll-proportion="0.44145873" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations/association.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="10" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.33205375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/enrollments/index.html.erb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations/builder/association.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="158" selection-start="744" selection-end="744" vertical-scroll-proportion="-10.78125">
+        <state line="43" column="0" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="0" selection-start="9301" selection-end="9301" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/activerecord-3.2.9/lib/active_record/associations/singular_association.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="15" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="89" selection-start="390" selection-end="390" vertical-scroll-proportion="0.5599251">
+        <state line="9" column="38" selection-start="0" selection-end="401" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="36" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.9/lib/action_view/helpers/form_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1267" column="8" selection-start="54148" selection-end="54148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="37" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/enrollment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="296" selection-end="296" vertical-scroll-proportion="0.24175824">
           <folding />
         </state>
       </provider>
