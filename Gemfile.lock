@@ -1,5 +1,6 @@
-PATH
-  remote: ../db-charmer
+GIT
+  remote: git://github.com/carols10cents/db-charmer
+  revision: ea97ca28cc7269a8d80941c531e3fc86534a2684
   specs:
     db-charmer (1.8.0)
       activerecord (<= 3.2.9)

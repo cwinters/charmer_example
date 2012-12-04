@@ -10,7 +10,7 @@ class LessonsController < ApplicationController
     end
 
     lesson = @lessons.first
-    lesson.enrollment
+    lesson.enrollment if lesson
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,8 +33,8 @@ class LessonsController < ApplicationController
   # GET /lessons/new.json
   def new
     @lesson = Lesson.new()
-    @lesson.enrollment = Enrollment.multi_find( params[:enrollment_id] )
-    @lesson.classroom_id = @lesson.enrollment.classroom_id
+    @lesson.enrollment = Enrollment.multi_find( params[:enrollment_id] )  if params[:enrollment_id]
+    @lesson.classroom_id = @lesson.enrollment.classroom_id                if @lesson.enrollment
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @lesson }
