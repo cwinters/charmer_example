@@ -22,10 +22,9 @@
 
 <br />
 
-<form method="get" action="<%= new_lesson_path %>">
-    Enrollment:
-      <select name="enrollment_id">
-      <%= options_from_collection_for_select( @enrollments, :id, :full_name ) %>
-      </select>
-    <%= submit_tag 'Go!' %>
-</form>
+<h2>New Lesson</h2>
+
+<% @enrollments.each do |enrollment| %>
+    <%= link_to enrollment.full_name, new_lesson_path(classroom_id: enrollment.classroom_id, enrollment_id: enrollment.id) %>
+    <br />
+<% end %>

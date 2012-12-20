@@ -1,4 +1,6 @@
 class Enrollment < ActiveRecord::Base
+  include ShardedModel
+
   db_magic :sharded => {
       key: :classroom_id, sharded_connection: :enrollments
   }
@@ -6,9 +8,14 @@ class Enrollment < ActiveRecord::Base
   before_create :assign_shard_id
 
   attr_accessible :classroom_id, :name, :user_id
+
   belongs_to :classroom
   belongs_to :user
   has_many :lessons
+
+  def lessons
+    super.on_db(shard_name(self.classroom_id))
+  end
 
   # eep! try all shards to find an object
   def self.multi_find(id)

@@ -15,6 +15,13 @@
   <%= @enrollment.classroom_id %>
 </p>
 
+<p>
+  <b>Lessons:</b>
+  <% @enrollment.lessons.each do |lesson| %>
+    <%=  lesson.name %> <br />
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
 <%= link_to 'Back', enrollments_path %>
