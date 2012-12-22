@@ -4,8 +4,7 @@ class Classroom < ActiveRecord::Base
   has_many :enrollments
 
   def enrollments
-    conn = Enrollment.sharded_connection.sharder.shard_for_key(self.id.to_s)
-    super.on_db(conn, nil)
+    super.on_classroom(id)
   end
 
   def full_name

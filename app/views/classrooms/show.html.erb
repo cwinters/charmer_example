@@ -10,6 +10,13 @@
   <%= @classroom.school.name %>
 </p>
 
+<p>
+  <b>Enrollments:</b>
+  <% @classroom.enrollments.each do |enrollment| %>
+    <%= link_to enrollment.full_name, enrollment_path(enrollment) %> <br />
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_classroom_path(@classroom) %> |
 <%= link_to 'Back', classrooms_path %>

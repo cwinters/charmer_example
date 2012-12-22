@@ -8,7 +8,27 @@
 </head>
 <body>
 
+<% if flash[:notice] %>
+  <p>FLASH: <%= flash[:notice] %></p>
+<% end %>
+
 <%= yield %>
+
+<form action="/assign_shard" method="POST">
+<% if session[:shard_name].present? %>
+    <p>Current shard: <%= session[:shard_name] %></p>
+<% end %>
+    <p>
+    Choose a shard:
+      <select name="shard_name">
+          <option value="">No current shard</option>
+        <% CharmerExample::Application.config.shards.each do |shard_name| %>
+          <option value="<%= shard_name.to_s %>"<% if shard_name.to_s == session[:shard_name] %> SELECTED="SELECTED"<% end %>><%= shard_name.to_s %></option>
+        <% end %>
+      </select>
+      <input type="submit" value="Go!" />
+    </p>
+</form>
 
 </body>
 </html>

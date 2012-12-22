@@ -1,11 +1,11 @@
 class EnrollmentsController < ApplicationController
   # GET /enrollments
   # GET /enrollments.json
+
+  before_filter :check_shard
+
   def index
-    @enrollments = []
-    CharmerExample::Application.config.shards.each do |shard_name|
-      @enrollments.push( *Enrollment.on_db( shard_name ).all )
-    end
+    @enrollments = Enrollment.on_db(session[:shard_name]).all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @enrollments }
@@ -15,7 +15,7 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments/1
   # GET /enrollments/1.json
   def show
-    @enrollment = Enrollment.shard_for( params[:classroom_id] ).find(params[:id])
+    @enrollment = Enrollment.on_db(session[:shard_name]).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -83,5 +83,13 @@ class EnrollmentsController < ApplicationController
       format.html { redirect_to enrollments_url }
       format.json { head :no_content }
     end
+  end
+
+  def check_shard
+    unless session[:shard_name].present?
+      flash[:notice] = "Choose a shard before manipulating enrollments."
+      redirect_to '/classrooms'
+    end
+    session[:shard_name].present?
   end
 end

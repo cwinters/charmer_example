@@ -1,21 +1,12 @@
 CharmerExample::Application.routes.draw do
   resources :attempts
-
-
-  resources :lessons
-
-
-  resources :enrollments
-
-
   resources :classrooms
-
-
+  resources :enrollments
+  resources :lessons
   resources :schools
-
-
   resources :users
 
+  match '/assign_shard', controller: :shards, action: :assign
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

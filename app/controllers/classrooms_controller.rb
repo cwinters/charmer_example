@@ -3,7 +3,6 @@ class ClassroomsController < ApplicationController
   # GET /classrooms.json
   def index
     @classrooms = Classroom.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @classrooms }
@@ -14,7 +13,7 @@ class ClassroomsController < ApplicationController
   # GET /classrooms/1.json
   def show
     @classroom = Classroom.find(params[:id])
-
+    @enrollments = @classroom.enrollments
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @classroom }

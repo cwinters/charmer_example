@@ -2,12 +2,8 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = []
-    @enrollments = []
-    CharmerExample::Application.config.shards.each do |shard_name|
-      @lessons.push( *Lesson.on_db( shard_name ).all )
-      @enrollments.push( *Enrollment.on_db( shard_name ).all )
-    end
+    @enrollments = Enrollment.current_shard.all
+    @lessons = Lesson.current_shard.all
 
     lesson = @lessons.first
     lesson.enrollment if lesson
@@ -21,11 +17,15 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   # GET /lessons/1.json
   def show
-    @lesson = Lesson.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @lesson }
+    classroom_id = params[:classroom_id]
+    if classroom_id
+      @lesson = Lesson.on_classroom(classroom_id).find(params[:id])
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @lesson }
+      end
+    else
+      redirect_to lessons_url
     end
   end
 
@@ -51,7 +51,7 @@ class LessonsController < ApplicationController
   # POST /lessons.json
   def create
     respond_to do |format|
-      @lesson = Lesson.shard_for(params[:lesson][:classroom_id]).create!(params[:lesson])
+      @lesson = Lesson.shard_for_classroom(params[:lesson][:classroom_id]).create!(params[:lesson])
       if @lesson
         format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
         format.json { render json: @lesson, status: :created, location: @lesson }
@@ -65,10 +65,14 @@ class LessonsController < ApplicationController
   # PUT /lessons/1
   # PUT /lessons/1.json
   def update
-    @lesson = Lesson.find(params[:id])
-
+    classroom_id = params[:classroom_id]
+    if classroom_id
+      @lesson = Lesson.shard_for_classroom(classroom_id).find(params[:id])
+    else
+      @lesson = nil
+    end
     respond_to do |format|
-      if @lesson.update_attributes(params[:lesson])
+      if @lesson && @lesson.update_attributes(params[:lesson])
         format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
         format.json { head :no_content }
       else
