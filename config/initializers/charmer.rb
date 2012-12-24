@@ -34,17 +34,22 @@ end
 
 ActiveSupport.on_load(:active_record) do
 
-# add some helpful methods to the association proxy -- DbCharmer does this itself
-# in db_charmer.rb lines 150-184
+# add some helpful methods to the association proxy that allow us to find the connection to use;
+# DbCharmer does something similar in db_charmer.rb lines 150-184
   ActiveRecord::Associations::CollectionProxy.class_exec do
 
     def current_shard
-      shard_name = RequestStore.store[:shard_name]
+      real_connection = @association.owner.connection.real_conn
+      if real_connection
+        puts "Association owner provided real connection! [Owner: #{@association.owner.class.to_s}@#{@association.owner.id}]"
+        on_db(real_connection)
+      end
+      shard_name = RequestStore.store && RequestStore.store[:shard_name]
       if shard_name
         puts "CharmerExample.current_shard [Value: #{shard_name}]"
         on_db(@association.owner.sharded_connection.sharder.shard_for_key(shard_name))
       else
-        on_db(@association.owner.db_charmer_connection_proxy) # ?!@>#? where is 'my current connection' stored in the object?
+        raise ::ActiveRecord::ConnectionNotEstablished, "Association owner has no connection (?!), so define RequestStore.store[:shard_name] to set the current shard"
       end
     end
 
@@ -63,20 +68,32 @@ ActiveSupport.on_load(:active_record) do
     end
   end
 
+  # This defines a CLASS method to find the current shard; it uses either the given connection or the
+  # shard defined by the global-ish 'shard_name' variable. Otherwise it throws an error.
   module DbCharmer
     module ActiveRecord
       module Sharding
-        def current_shard
-          shard_name = RequestStore.store[:shard_name]
+        def current_shard(conn = nil)
+          return on_db(conn) if conn
+          shard_name = RequestStore.store && RequestStore.store[:shard_name]
           if shard_name
             puts "#{self}.current_shard [Value: #{shard_name}]"
-            on_db(self.sharded_connection.sharder.shard_for_key(shard_name))
+            return on_db(self.sharded_connection.sharder.shard_for_key(shard_name))
           else
-            puts "#{self}.current_shard - NO current_shard value, what to do?!"
-            on_db(self.db_charmer_connection_proxy) # ?!@>#? where is 'my current connection' stored in the object?
+            raise ::ActiveRecord::ConnectionNotEstablished, "Define RequestStore.store[:shard_name] to set the current shard"
           end
         end
       end
     end
   end
+
+  # inject our '_in_shard' versions of associations
+  require 'shard_association_shortcuts'
+  ActiveRecord::Base.send(:include, ShardAssociationShortcuts::ActiveRecord)
+
+  # add a attribute accessor so we can directly grab the real connection at runtime
+  DbCharmer::Sharding::StubConnection.class_exec do
+    attr_accessor :real_conn
+  end
+
 end

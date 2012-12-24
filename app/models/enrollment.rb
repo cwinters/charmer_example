@@ -9,13 +9,9 @@ class Enrollment < ActiveRecord::Base
 
   belongs_to :classroom
   belongs_to :user
-  has_many :lessons
+  has_many_in_shard :lessons
 
   before_create :assign_shard_id
-
-  def lessons
-    super.current_shard
-  end
 
   def full_name
     "#{user.login} in #{classroom.name}: #{name}"

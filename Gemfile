@@ -9,7 +9,7 @@ gem 'pg'
 
 gem 'db-charmer', :require => 'db_charmer', :git => 'git://github.com/carols10cents/db-charmer' #:path => '../db-charmer', :require => 'db_charmer'
 
-gem 'request_store'
+gem 'request_store', :git => 'git://github.com/steveklabnik/request_store'
 
 #gem 'sqlite3'
 
